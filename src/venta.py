@@ -36,7 +36,7 @@ while N==1:
        print("Digite el ID del producto deseado:")
        for venta in ventas:
          bsq=int(input())
-         if bsq==id in venta:
+         if bsq==venta[0] in ventas:
           print(venta)
          else:
           print("No se encuentra un producto con el ID ingresado") 
