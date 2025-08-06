@@ -1,4 +1,5 @@
 N = 1
+ventas=[]
 while N==1:
     
     print("Opciones:")
@@ -22,20 +23,26 @@ while N==1:
      c = int(input())
      print("Digite el precio del producto")
      pu = float(input())
-     ventas = [id,p,c,pu]
-     print(ventas)
+     venta = [id,p,c,pu]
+     ventas.append(venta)
+     print(venta)
      print("Los ingresos totales de estas ventas son: ",(pu*c))
     elif Op==2:
-      print("si") 
+      print(ventas)
+
+       
     elif Op==3:
+     #Busqueda por id   
        print("Digite el ID del producto deseado:")
-       bsq=int(input())
-       if bsq in ventas:
-          print(ventas)
-       else:
+       for venta in ventas:
+         bsq=int(input())
+         if bsq==id in venta:
+          print(venta)
+         else:
           print("No se encuentra un producto con el ID ingresado") 
 
     elif Op==4:
+     #Modificar 
        print("Que elemento desea modificar:")
        print("1. ID")
        print("2. Producto")
@@ -45,9 +52,18 @@ while N==1:
        while md>5 or md<1:
         print("por favor ingrese una opcion valida")
         md = int(input())
-       
+       if md==1:
+         id= int(input())
+       elif md==2:
+          p =input()
+       elif md==3:
+          c= int(input())
+       else: pu=float(input) 
+       print(venta)    
+
        
     elif Op==6:
    #Salir    
        N = 2
        print("Hasta la proxima")
+       print(ventas)
