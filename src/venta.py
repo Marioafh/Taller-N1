@@ -39,7 +39,13 @@ while N==1:
        print("Que elemento desea modificar:")
        print("1. ID")
        print("2. Producto")
-       print("Que elemento desea modificar")
+       print("3. Cantidad")
+       print("4. Precio Unitario")
+       md = int(input())
+       while md>5 or md<1:
+        print("por favor ingrese una opcion valida")
+        md = int(input())
+       
        
     elif Op==6:
    #Salir    
